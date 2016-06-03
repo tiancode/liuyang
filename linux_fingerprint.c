@@ -22,11 +22,30 @@ void getMacHash( unsigned short* mac1, unsigned short* mac2 )
 
 unsigned short getVolumeHash()
 {
+	
 	return 0;
 }
+
+ static void getCpuid( unsigned int* p, unsigned int ax )
+ {
+ 	__asm __volatile
+	(   "movl %%ebx, %%esi\n\t"
+	    "cpuid\n\t"
+            "xchgl %%ebx, %%esi"
+            : "=a" (p[0]), "=S" (p[1]),
+              "=c" (p[2]), "=d" (p[3])
+            : "0" (ax)
+        );
+ }
 unsigned short getCpuHash()
 {
-	return 0;
+	unsigned int cpuinfo[4] = { 0, 0, 0, 0 };
+	getCpuid( cpuinfo, 0 );
+	unsigned short hash = 0;
+	unsigned int* ptr = (&cpuinfo[0]);
+	for ( int i = 0; i < 4; i++ )
+		hash += (ptr[i] & 0xFFFF) + ( ptr[i] >> 16 ); 
+	return hash;
 }
 
 const char* getMachineName()
@@ -45,5 +64,6 @@ const char* getMachineName()
 int main(int argc, char* argv[])
 {
 	printf("%s\n", getMachineName());
+	printf("%d\n", getCpuHash());
 	return 0;
 }
