@@ -1,0 +1,316 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\mmlTool.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\mmlTool.ico"
+IDI_ICON_LEFT           ICON                    "res\\left.ico"
+IDI_ICON_RIGHT          ICON                    "res\\right.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 209, 169
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "万思维TD-SCDMA常用工具"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    LTEXT           "mmlTool，2.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 北京万思维通信技术有限公司 2014",IDC_STATIC,42,26,149,8
+    DEFPUSHBUTTON   "确定",IDOK,152,148,50,14,WS_GROUP
+    LTEXT           "                  -田帅 QQ：811627469       ",IDC_STATIC,62,129,123,8
+    EDITTEXT        IDC_EDIT1,7,41,195,74,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_MMLTOOL_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "万思维TD-SCDMA常用工具"
+MENU IDR_MENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,306,186
+END
+
+IDD_REGISTER_DIALOG DIALOGEX 0, 0, 368, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "注册"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CO_PICTURE,"Static",SS_BITMAP,7,7,15,13,WS_EX_ACCEPTFILES
+    LTEXT           "机器特征码：",IDC_STATIC,13,131,49,8
+    LTEXT           "注册码：",IDC_STATIC,28,154,33,8
+    EDITTEXT        IDC_EDIT_UNIQE,63,129,189,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_REGISTER_NUM,63,151,189,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "注册",IDC_BUTTON_REGISTER,265,151,43,14
+    PUSHBUTTON      "取消",IDC_BUTTON_CANCEL,313,151,40,14
+    LTEXT           "索取验证码(有效期90天)，请联系北京万思维技术部。windows7/8请以管理员方式运行 ",IDC_STATIC,17,114,316,8
+END
+
+IDD_DIALOG_MMLBAOWEN DIALOGEX 0, 0, 275, 147
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "导出MML报文到EXCEL"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "选择要导出的文件(TXT)",IDC_STATIC,18,9,82,8
+    PUSHBUTTON      ". . . ",IDC_BUTTON_SELECT_FILE,105,9,42,14
+    PUSHBUTTON      "生成EXCEL表格",IDC_BUTTON_RUN,194,9,64,14
+    LISTBOX         IDC_LIST_FILE,7,31,261,106,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_EXPORT_ANY_MML DIALOGEX 0, 0, 287, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "导出MML命令"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_MML,16,30,105,110,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_MML_SELECT,167,31,103,109,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "可导出MML命令(在config文件中追加命令)",IDC_STATIC,17,13,144,8
+    PUSHBUTTON      "导出",IDC_BUTTON_EXPORT,221,143,50,14
+    PUSHBUTTON      "",IDC_BUTTON_RIGHT,121,45,44,28
+    PUSHBUTTON      "",IDC_BUTTON_LEFT,122,91,43,28
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "北京万思维通信技术有限公司"
+            VALUE "FileDescription", "万思维TD-SCDMA常用工具"
+            VALUE "FileVersion", "2.0.0.2"
+            VALUE "InternalName", "mmlTool.exe"
+            VALUE "LegalCopyright", "(C) 北京万思维通信技术有限公司。保留所有权利。"
+            VALUE "OriginalFilename", "mmlTool.exe"
+            VALUE "ProductName", "万思维TD-SCDMA常用工具"
+            VALUE "ProductVersion", "2.3"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_MMLTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_REGISTER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_DIALOG_MMLBAOWEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_DIALOG_EXPORT_ANY_MML, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "文件"
+    BEGIN
+        MENUITEM "解析MML文件(txt)",                ID_MENU_IMPORT
+        MENUITEM "选择XML目录",                     ID_MENU_WORK_PATH
+        MENUITEM "退出",                          ID_MENU_QUIT
+    END
+    POPUP "统计"
+    BEGIN
+        MENUITEM "邻区信息",                        ID_N_CELL_INFO
+        MENUITEM "CELLBAR信息",                   ID_STATIC_CELLBAR
+    END
+    POPUP "导出"
+    BEGIN
+        MENUITEM "导出邻区表",                       ID_EXPORT_NINE_TABLE
+        MENUITEM "导出CELLBAR表",                  ID_EXPORT_CELLBAR_TABLE
+        MENUITEM "导出指定表",                       ID_SELECT_ORDER_TABLE
+    END
+    POPUP "报表统计"
+    BEGIN
+        MENUITEM "小区/载波/接入限制提取",                ID_MML_BAOWEN_TABLE
+        MENUITEM "ISCP指标TOP100",                ID_ISCP
+        MENUITEM "TOP小区",                       ID_TOP_KPI
+    END
+    POPUP "小区信息统计"
+    BEGIN
+        POPUP "RNC文件"
+        BEGIN
+            MENUITEM "导入MML文件",                     ID_RNC_MML_FILE
+            MENUITEM "导出文件",                        ID_RNC_OUT
+            MENUITEM "清除缓存",                        ID_RNC_CLEAR
+        END
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                          ID_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 mmlTool(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\mmlTool.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
